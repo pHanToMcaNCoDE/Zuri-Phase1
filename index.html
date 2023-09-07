@@ -44,10 +44,18 @@
 
         document.getElementById('day').innerHTML = day;
 
-        const time = date.getUTCMilliseconds();
-        document.getElementById('time').innerHTML = time;
+        // const time = date.getUTCMilliseconds();
+        // document.getElementById('time').innerHTML = time;
+
+         
+       const ms = document.getElementById('time');
+
+       setInterval(() => {
+            const utcMS = date.getUTCMilliseconds();
+            ms.textContent = utcMS
+       }, 1000);
         
-        
+        window.addEventListener('load', ms);
     </script>
 </body>
 </html>
