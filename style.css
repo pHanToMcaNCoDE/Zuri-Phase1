@@ -1,0 +1,147 @@
+@import url('https://fonts.googleapis.com/css2?family=Inconsolata:wght@300;400;500;600;700&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+/* Css Font and Color Variables */
+
+:root{
+
+    /* Colors Used */
+
+    --bg: rgb(10 10 10);
+    --w: #ffffff;
+    --cb: cadetblue;
+
+    /* Font-Family's Used */
+
+    --inc: 'Inconsolata';
+    --av: 'Avenir';
+    --space: 'Space Grotesk'
+}
+
+p,h1,h2{
+    color: var(--w);
+}
+
+.label {
+    font-size: 1rem;
+    font-family: var(--space);
+    font-weight: 300;
+    margin: 0 .7em;
+}
+
+
+body{
+    background-color: var(--bg);
+}
+
+/* Head Styling */
+header{
+    position: absolute;
+    top: 5%;
+    left: 35%;
+}
+header .mainHeading{
+    font-size: 3.7rem;
+    font-family: var(--inc);
+    font-weight: 400;
+}
+
+
+/* Profile Styling */
+
+.profile{
+    max-width: 1200px;
+    margin: 15% auto;
+    /* padding: 4; */
+    height: 50vh;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    border: 1px solid var(--w);
+}
+
+.left{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    width: 55%;
+    margin: 2em;
+}
+
+.left .top{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+.top .name{
+    font-family: var(--space);
+    font-size: 3.2rem;
+    letter-spacing: 8px;
+    font-weight: 300;
+}
+
+.top .track {
+    font-family: var(--space);
+    font-size: 1.9rem;
+    letter-spacing: 8px;
+    font-weight: 300;
+    padding: 1em;
+}
+
+.top .mid{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.top .mid .day{
+    font-family: var(--inc);
+    font-weight: 300;
+    font-size: 1.4rem;
+    letter-spacing: 3px;
+    margin: 0 .2em;
+}
+
+.top .mid .time {
+    font-family: var(--inc);
+    font-weight: 300;
+    font-size: 1.4rem;
+    letter-spacing: 3px;
+    margin: 0 .2em;
+}
+
+.left .btm{
+    margin: 1.2em 0;
+}
+
+.btm a{
+    font-size: 1.5rem;
+    color: var(--cb);
+    font-family: var(--space);
+    font-weight: 300;
+}
+
+.right {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 45%;
+}
+
+.right img{
+    width: 350px;
+    height: 350px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 1px solid var(--w);
+}

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zuri Training || Frontend Page Creation</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1 class="mainHeading">My Slack Data</h1>
+    </header>
+    <section class="profile">
+        <div class="left">
+
+            <div class="top">
+                <h1 class="name" data-testid="slackUserName">Victory Odumeh</h1>
+                <p class="track" data-testid="myTrack">Frontend Developer</p>
+                <div class="mid">
+                    <p class="label">Current Day:</p>
+                    <p class="day" id="day" data-testid="currentDayOfTheWeek"></p><p class="label">Time(Milliseconds):</p>
+                    <p class="time" id="time" data-testid="currentUTCTime"></p>
+                </div>
+            </div>
+
+            <div class="btm">
+                <a href="#" data-testid="githubURL">GitHub Repository</a>
+            </div>
+
+        </div>
+        <div class="right">
+            <img src="assets/profile.jpg" alt="Victory Odumeh" data-testid="slackDisplayImage">
+        </div>
+    </section>
+        
+    <script>
+        const days = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
+
+        
+
+        const date = new Date();
+        let day = days[date.getDay()];
+
+        document.getElementById('day').innerHTML = day;
+
+        const time = date.getUTCMilliseconds();
+        document.getElementById('time').innerHTML = time;
+        
+        
+    </script>
+</body>
+</html>
